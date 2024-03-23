@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+	<style type="text/css">
+		.mdiv 
+		{
+			height: 100vh;
+			width: 100%;
+			background-color: black;
+			background-image: url('https://wallpapercave.com/wp/wp2939892.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		marquee{
+
+			color: grey;
+			font-size: 40px;
+			letter-spacing: 10px;
+			font-weight: bold;
+		
+		}
+		.lgnfrm
+		{
+			height: 350px;
+			width: 300px;
+			border-radius: 10px;
+			margin-left: 150px;
+			margin-top: 150px;
+			background-color: transparent;
+			transition-duration: 4s;
+		
+
+		}
+		.lgnfrm:hover
+		{
+			box-shadow: 0px 0px 60px orange;
+		}
+		input
+		{
+			margin-bottom: 20px;
+			background-color: transparent;
+			align-content: center;
+			border: none;
+			border-bottom: 2px solid white;
+		}
+		input[type="button"]
+		{	
+			margin-top: 20px;
+			width: 90%;
+			height: 40px;
+			border: 2px solid red;
+			color: aqua; 
+			font-size: 25px;
+			border-radius: 10px;
+			transition-duration: 1s;
+		}
+		input[type="button"]:hover
+		{
+			color:black;
+			background-color: aqua;
+			border: none;
+			transform: scale(1.1);
+		}
+		input[type="text"]
+		{
+
+			width: 90%;
+			height: 30px;
+			color:skyblue;
+			font-size: 20px;
+			transition-duration: 1s;
+			margin-top: 10px;
+
+			
+		}
+		input[type="text"]:hover
+		{
+			transform: scale(1.1);
+		}
+		input[type="password"]
+		{
+			width: 90%;
+			height: 30px;
+			color: aqua;
+			font-size: 20px;
+			transition-duration: 1s;
+			
+		}
+		input[type="password"]:hover
+		{
+			transform: scale(1.1);
+		}
+		input:focus
+		{
+			outline: none;
+
+		}
+		a
+		{
+			color: aqua;
+			transition-duration: 1s;
+		}
+		a:hover
+		{
+			color: yellow;
+			font-size: 20px;
+		}
+		::placeholder
+		{
+			color: aqua;
+			opacity: 0.5;
+		}
+		hr
+		{
+			height: 1px;
+			background-color: red;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="mdiv">
+		<div class="lgnfrm" align="center">
+			<form autocomplete="off">
+				<marquee scrollamount=5;>LOGIN</marquee>
+				<hr>
+				<input type="text" name="usn" placeholder="Username" id="usr">
+				<input type="password" name="psw" placeholder="Password" id="pass">
+				<input type="button" name="loginbt" value="Login" onclick="validate()">
+				
+				<span> <a href="#" class="fgp" style="margin-right: 10%;"> Forgot Password </a> </span>
+				<span> <a href="#" class="ca"> Create Account </a> </span>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let usr1 = "something"
+		let pass1 = "Password"
+
+		function validate(){
+			let usr2 = document.getElementById("usr").value;
+			let pass2 = document.getElementById("pass").value;
+
+			if((usr1 === usr2) && (pass1 === pass2)){
+				open('Homepage.html');
+			}
+			else {
+				alert('Wrong Password');
+			}
+		}
+
+
+	</script>
+</body>
+</html>
